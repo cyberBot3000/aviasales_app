@@ -1,0 +1,29 @@
+@import '/src/Shared/styles/variables';
+
+.filter-box {
+	background: #FFFFFF;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 1.5em 0em;
+
+	&__label {
+		padding: 0em 1.5em 1.1em 1.5em;
+	}
+
+	&__label-typography {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.1em;
+		color: $color-text-main;
+	}
+
+	&__checkbox-item {
+		padding: .8em 1.5em;
+		transition: background-color ease-in-out .3s;
+
+		&:hover {
+			background-color: $color-secondary-2;
+
+		}
+	}
+}
