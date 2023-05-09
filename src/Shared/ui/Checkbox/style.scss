@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.checkbox {
+
+
+	&:has(.checkbox__input:checked) {
+		.checkbox__icon-wrapper {
+			border-color: $color-accent;
+		}
+	}
+
+	&__icon-wrapper {
+		font-size: .8em;
+		width: 1.5em;
+		height: 1.5em;
+		border: 2px solid $color-secondary;
+		border-radius: 3px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__icon {
+		color: $color-accent;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 8px;
+		cursor: pointer;
+	}
+
+	&__input {
+		display: none;
+	}
+}

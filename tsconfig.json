@@ -18,5 +18,6 @@
 		"rootDir": "./src",
 		"baseUrl": "./src"
 	},
-	"include": ["node_modules", "src"]
+	"include": ["src", "src/custom.d.ts"],
+	"exclude": ["node_modules"]
 }

@@ -1,24 +1,47 @@
-import { Checkbox } from 'Shared/ui/Checkbox/ui/Checkbox';
-import React, { useCallback, useState } from 'react';
-import type { FC } from 'react';
+import {
+	Checkbox,
+	type CheckboxGroupChangeHandler,
+	type CheckboxOption,
+	type CheckboxValueType,
+} from 'Shared/ui/Checkbox';
+import { useCallback, useMemo, useState, type FC } from 'react';
 
 export const HomePage: FC = () => {
-	const [isChecked, setIsChecked] = useState(false);
-	const onChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
-		(e) => {
-			setIsChecked(e.target.checked);
+	const options = useMemo<CheckboxOption[]>(
+		() => [
+			{
+				label: 'one',
+				value: 'one',
+				key: 1,
+			},
+			{
+				label: 'two',
+				value: 'two',
+				key: 2,
+			},
+			{
+				label: 'three',
+				value: 'three',
+				key: 3,
+			},
+		],
+		[]
+	);
+	const [checked, setChecked] = useState<CheckboxValueType[]>([]);
+	const groupChangeHandler = useCallback<CheckboxGroupChangeHandler>(
+		(list) => {
+			setChecked(list);
+			console.log(list);
 		},
 		[]
 	);
+
 	return (
 		<div className="home-page">
-			<Checkbox
-				className="some"
-				label="checkbox"
-				checked={isChecked}
-				onChange={onChange}
-				name="checkbox"
-				intermidiate={false}
+			<Checkbox.CheckAllGroup
+				options={options}
+				value={checked}
+				onChange={groupChangeHandler}
 			/>
 		</div>
 	);
