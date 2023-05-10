@@ -46,8 +46,11 @@ export const InternalCheckbox = memo<FC<CheckboxProps>>(
 		};
 
 		return (
-			<div className={`checkbox ${className ?? ''}`}>
-				<label htmlFor={inputId} className="checkbox__content">
+			<div className="checkbox">
+				<label
+					htmlFor={inputId}
+					className={`checkbox__content ${className ?? ''}`}
+				>
 					<div className="checkbox__icon-wrapper">
 						{!isChecked && indeterminate && (
 							<FontAwesomeIcon
