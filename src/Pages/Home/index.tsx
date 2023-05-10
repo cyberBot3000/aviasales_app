@@ -8,6 +8,7 @@ import { Flex } from 'Shared/ui/Flex';
 import { useCallback, useMemo, useState, type FC } from 'react';
 
 import { FilterBox } from 'Widgets/FilterBox';
+import FilterTabs from 'Widgets/FilterTabs';
 import './style.scss';
 
 export const HomePage: FC = () => {
@@ -16,17 +17,14 @@ export const HomePage: FC = () => {
 			{
 				label: 'one',
 				value: 'one',
-				key: 1,
 			},
 			{
 				label: 'two',
 				value: 'two',
-				key: 2,
 			},
 			{
 				label: 'three',
 				value: 'three',
-				key: 3,
 			},
 		],
 		[]
@@ -38,6 +36,9 @@ export const HomePage: FC = () => {
 		},
 		[]
 	);
+	// const tabsChangeHandler = useCallback<TabChangeEventHandler>((e) => {
+	// 	console.log(e.value);
+	// }, []);
 
 	return (
 		<div className="home-page">
@@ -51,7 +52,12 @@ export const HomePage: FC = () => {
 							label="Количество пересадок"
 						/>
 					</div>
-					<div className="home-page__content">i am content</div>
+					<div className="home-page__content">
+						<div className="home-page__content-header">
+							<FilterTabs options={options} />
+						</div>
+						i am content
+					</div>
 				</Flex>
 			</Container>
 		</div>
