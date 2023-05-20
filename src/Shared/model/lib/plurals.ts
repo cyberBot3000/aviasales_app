@@ -4,9 +4,9 @@ const PLURALS: Record<Locales, PluralKeys> = {
 			zero: 'пересадок',
 			one: 'пересадка',
 			two: 'пересадки',
-			few: 'пересадок',
+			few: 'пересадки',
 			many: 'пересадок',
-			other: 'пересадок',
+			other: 'пересадки',
 		},
 	},
 };

@@ -1,0 +1,51 @@
+@import '/src/Shared/styles/_variables';
+
+.tickets {
+	margin-bottom: 10px;
+
+	&__get-more-btn {
+		background-color: $color-accent;
+		font-size: 1.5em;
+		width: 100%;
+		padding: .8em;
+		color: white;
+		font-weight: 600;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	&__message {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+		font-size: 2em;
+		padding: .5em;
+	}
+
+	&__percent-loader {
+		margin: 1em 0em;
+		font-size: 1.2em;
+	}
+
+	&__percent-loader-label {
+		margin-bottom: 1em;
+	}
+
+	&__percent-loader-wrapper {
+		width: 100%;
+		background-color: $color-secondary;
+		border-radius: 10px;
+		height: .5em;
+		overflow: hidden;
+	}
+
+	&__percent-loader-value {
+		background-color: $color-accent;
+		height: 100%;
+		transition: width .5s ease-out;
+	}
+}

@@ -1,5 +1,5 @@
-import { getPluralString } from 'Shared/lib/plurals';
-import { useListKeys } from 'Shared/utils';
+import { getPluralString } from 'Shared/model/lib/plurals';
+import { useListKeys } from 'Shared/model/hooks';
 import { type FC } from 'react';
 import { useTicketCardContext } from '../context';
 import { getLandingTime, getTimeParts, getTimeString } from '../utils';

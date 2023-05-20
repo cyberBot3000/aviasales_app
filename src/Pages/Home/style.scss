@@ -8,10 +8,18 @@
 		flex: 0 0 25%;
 		width: 25%;
 		min-width: 0;
+		position: sticky;
+		top: 2.1em;
+		align-self: flex-start;
 	}
 
 	&__content {
 		flex: 1 1 75%;
 		width: 75%;
+	}
+
+	&__content-header {
+		position: sticky;
+		top: 2.1em;
 	}
 }
